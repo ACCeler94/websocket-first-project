@@ -100,6 +100,10 @@ p {
   max-width: 200px;
 }
 
+.message__content.admin {
+  font-style: italic;
+}
+
 .message--self .message__content {
   background: #3498db;
 }
