@@ -7,6 +7,8 @@ const socket = io();
 
 // listeners
 socket.on('message', ({ author, content }) => addMessage(author, content));
+socket.on('newUser', ({ user }) => addMessage('ChatBot', `${user} has joined the conversation!`));
+socket.on('userLeft', ({ user }) => addMessage('ChatBot', `${user} has left the conversation... :(`));
 
 
 // HTML references
